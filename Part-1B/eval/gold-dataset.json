@@ -1,0 +1,77 @@
+[
+  {
+    "id": "bfsi-legacy-platform",
+    "clientDomain": "BFSI",
+    "rfpText": "The 18-year-old mainframe is approaching end of life, and failures threaten the stability of our claims platform. We need to modernize the legacy platform to prevent outages.",
+    "expectedCategories": ["Legacy Modernization"],
+    "expectedPainPoints": [
+      {
+        "id": "gold-legacy-1",
+        "category": "Legacy Modernization",
+        "severity": "High",
+        "summary": "Modernize the mainframe before repeated failures disrupt claims operations.",
+        "evidenceQuote": "The 18-year-old mainframe is approaching end of life, and failures threaten the stability of our claims platform."
+      }
+    ]
+  },
+  {
+    "id": "bfsi-reconciliation-cost",
+    "clientDomain": "BFSI",
+    "rfpText": "Manual claims reconciliation creates rising operating costs and long turnaround times for the BFSI servicing team. We need to automate reconciliation and reduce labor overhead.",
+    "expectedCategories": ["Cost & Operational Efficiency"],
+    "expectedPainPoints": [
+      {
+        "id": "gold-cost-1",
+        "category": "Cost & Operational Efficiency",
+        "severity": "Medium",
+        "summary": "Automate claims reconciliation to lower operating costs and shorten turnaround time.",
+        "evidenceQuote": "Manual claims reconciliation creates rising operating costs and long turnaround times for the BFSI servicing team."
+      }
+    ]
+  },
+  {
+    "id": "bfsi-audit-controls",
+    "clientDomain": "BFSI",
+    "rfpText": "Recent audit findings show gaps in KYC checks and access controls, creating regulatory exposure. We need to strengthen compliance controls before the next examination.",
+    "expectedCategories": ["Compliance & Security"],
+    "expectedPainPoints": [
+      {
+        "id": "gold-compliance-1",
+        "category": "Compliance & Security",
+        "severity": "High",
+        "summary": "Strengthen KYC and access controls to reduce regulatory exposure.",
+        "evidenceQuote": "Recent audit findings show gaps in KYC checks and access controls, creating regulatory exposure."
+      }
+    ]
+  },
+  {
+    "id": "retail-service-waits",
+    "clientDomain": "Retail",
+    "rfpText": "Customers abandon calls after long wait times and report inconsistent support across our contact center and digital channels. We need to improve customer satisfaction.",
+    "expectedCategories": ["Customer Experience"],
+    "expectedPainPoints": [
+      {
+        "id": "gold-customer-1",
+        "category": "Customer Experience",
+        "severity": "Medium",
+        "summary": "Improve cross-channel support to reduce wait times and abandoned calls.",
+        "evidenceQuote": "Customers abandon calls after long wait times and report inconsistent support across our contact center and digital channels."
+      }
+    ]
+  },
+  {
+    "id": "retail-inventory-insight",
+    "clientDomain": "Retail",
+    "rfpText": "Our operations team cannot produce real-time inventory visibility or demand forecasts because sales data is siloed across reporting systems. We need better analytics and dashboards.",
+    "expectedCategories": ["Data & Analytics"],
+    "expectedPainPoints": [
+      {
+        "id": "gold-data-1",
+        "category": "Data & Analytics",
+        "severity": "High",
+        "summary": "Unify sales data to enable real-time inventory visibility and demand forecasting.",
+        "evidenceQuote": "Our operations team cannot produce real-time inventory visibility or demand forecasts because sales data is siloed across reporting systems."
+      }
+    ]
+  }
+]

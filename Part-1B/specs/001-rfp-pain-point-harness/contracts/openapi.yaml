@@ -1,0 +1,148 @@
+openapi: 3.1.0
+info:
+  title: RFP Pain-Point Extractor API
+  version: 1.0.0
+  description: Extract structured, source-grounded pain points from RFP text.
+servers:
+  - url: http://localhost:3000
+paths:
+  /extract-pain-points:
+    post:
+      operationId: extractPainPoints
+      summary: Extract client pain points from an RFP excerpt
+      description: >
+        The trimmed rfpText must contain 20 to 50,000 Unicode code points.
+        The complete JSON request body must not exceed 51,200 encoded bytes.
+        Unknown request properties are ignored.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - rfpText
+              properties:
+                rfpText:
+                  type: string
+                  minLength: 20
+                  maxLength: 50000
+                  description: Trimmed before length validation and extraction.
+                clientDomain:
+                  type: string
+                  enum:
+                    - BFSI
+                    - Healthcare
+                    - Retail
+                    - General
+                  default: General
+              additionalProperties: true
+      responses:
+        "200":
+          description: Pain points were extracted successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExtractionResult"
+        "400":
+          description: Invalid request or request body exceeds 51,200 bytes.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: Unsupported route.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                error: Not found
+        "502":
+          description: Configured provider failed or returned unusable output.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    ExtractionResult:
+      type: object
+      required:
+        - mode
+        - clientDomain
+        - painPoints
+        - summary
+      properties:
+        mode:
+          type: string
+          enum:
+            - llm
+            - fallback
+        clientDomain:
+          type: string
+          enum:
+            - BFSI
+            - Healthcare
+            - Retail
+            - General
+        painPoints:
+          type: array
+          items:
+            $ref: "#/components/schemas/PainPoint"
+        summary:
+          type: object
+          required:
+            - totalPainPoints
+            - highSeverityCount
+          properties:
+            totalPainPoints:
+              type: integer
+              minimum: 0
+            highSeverityCount:
+              type: integer
+              minimum: 0
+          additionalProperties: false
+      additionalProperties: false
+    PainPoint:
+      type: object
+      required:
+        - id
+        - category
+        - severity
+        - summary
+        - evidenceQuote
+      properties:
+        id:
+          type: string
+          minLength: 1
+        category:
+          type: string
+          enum:
+            - Legacy Modernization
+            - Cost & Operational Efficiency
+            - Compliance & Security
+            - Customer Experience
+            - Data & Analytics
+        severity:
+          type: string
+          enum:
+            - High
+            - Medium
+            - Low
+        summary:
+          type: string
+          minLength: 1
+        evidenceQuote:
+          type: string
+          minLength: 1
+      additionalProperties: false
+    Error:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: string
+          minLength: 1
+      additionalProperties: false

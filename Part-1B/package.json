@@ -1,0 +1,14 @@
+{
+  "name": "rfp-pain-point-extractor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "eval": "node eval/harness.js"
+  }
+}
