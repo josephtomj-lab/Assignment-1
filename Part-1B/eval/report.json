@@ -1,0 +1,224 @@
+{
+  "caseResults": [
+    {
+      "caseId": "bfsi-legacy-platform",
+      "layer1": {
+        "passed": true,
+        "findings": []
+      },
+      "layer2": {
+        "passed": true,
+        "groundedCount": 2,
+        "ungroundedCount": 0,
+        "quotes": [
+          {
+            "painPointId": "pp-4d69f0a05403",
+            "grounded": true
+          },
+          {
+            "painPointId": "pp-4f7704f8e744",
+            "grounded": true
+          }
+        ]
+      },
+      "layer3": {
+        "scores": {
+          "actionability": 4.5,
+          "specificity": 4.5,
+          "domainRelevance": 3
+        },
+        "scorerMode": "fallback"
+      },
+      "overall": "PASS"
+    },
+    {
+      "caseId": "bfsi-reconciliation-cost",
+      "layer1": {
+        "passed": true,
+        "findings": []
+      },
+      "layer2": {
+        "passed": true,
+        "groundedCount": 2,
+        "ungroundedCount": 0,
+        "quotes": [
+          {
+            "painPointId": "pp-35bb54f159d5",
+            "grounded": true
+          },
+          {
+            "painPointId": "pp-fc689cc450a8",
+            "grounded": true
+          }
+        ]
+      },
+      "layer3": {
+        "scores": {
+          "actionability": 4.5,
+          "specificity": 4,
+          "domainRelevance": 3
+        },
+        "scorerMode": "fallback"
+      },
+      "overall": "PASS"
+    },
+    {
+      "caseId": "bfsi-audit-controls",
+      "layer1": {
+        "passed": true,
+        "findings": []
+      },
+      "layer2": {
+        "passed": true,
+        "groundedCount": 2,
+        "ungroundedCount": 0,
+        "quotes": [
+          {
+            "painPointId": "pp-1c1fd28dc020",
+            "grounded": true
+          },
+          {
+            "painPointId": "pp-2c757035faf8",
+            "grounded": true
+          }
+        ]
+      },
+      "layer3": {
+        "scores": {
+          "actionability": 4,
+          "specificity": 4.5,
+          "domainRelevance": 3
+        },
+        "scorerMode": "fallback"
+      },
+      "overall": "PASS"
+    },
+    {
+      "caseId": "retail-service-waits",
+      "layer1": {
+        "passed": true,
+        "findings": []
+      },
+      "layer2": {
+        "passed": true,
+        "groundedCount": 2,
+        "ungroundedCount": 0,
+        "quotes": [
+          {
+            "painPointId": "pp-0d1c04efc144",
+            "grounded": true
+          },
+          {
+            "painPointId": "pp-f13517c9a577",
+            "grounded": true
+          }
+        ]
+      },
+      "layer3": {
+        "scores": {
+          "actionability": 5,
+          "specificity": 4.5,
+          "domainRelevance": 4
+        },
+        "scorerMode": "fallback"
+      },
+      "overall": "PASS"
+    },
+    {
+      "caseId": "retail-inventory-insight",
+      "layer1": {
+        "passed": true,
+        "findings": []
+      },
+      "layer2": {
+        "passed": true,
+        "groundedCount": 2,
+        "ungroundedCount": 0,
+        "quotes": [
+          {
+            "painPointId": "pp-3b04a0676c6c",
+            "grounded": true
+          },
+          {
+            "painPointId": "pp-ddee8dc1fe11",
+            "grounded": true
+          }
+        ]
+      },
+      "layer3": {
+        "scores": {
+          "actionability": 5,
+          "specificity": 4,
+          "domainRelevance": 3
+        },
+        "scorerMode": "fallback"
+      },
+      "overall": "PASS"
+    }
+  ],
+  "categoryMetrics": [
+    {
+      "category": "Legacy Modernization",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    {
+      "category": "Cost & Operational Efficiency",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    {
+      "category": "Compliance & Security",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    {
+      "category": "Customer Experience",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    {
+      "category": "Data & Analytics",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  ],
+  "macroF1": 1,
+  "rubricMeans": {
+    "actionability": 4.6,
+    "specificity": 4.3,
+    "domainRelevance": 3.2,
+    "overall": 4.0333
+  },
+  "thresholds": {
+    "macroF1": 0.7,
+    "overallRubricMean": 3.5,
+    "perDimensionMean": 3
+  },
+  "scorerMode": "fallback",
+  "overall": {
+    "status": "PASS",
+    "passed": true,
+    "failures": []
+  }
+}
